@@ -1,0 +1,82 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "nav nav nav"
+    "left article right"
+    "feet feet feet";
+}
+
+header {
+  grid-area: h;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.egyik {
+  grid-area: left;
+}
+
+article {
+  grid-area: article;
+}
+
+.masik {
+  grid-area: right;
+}
+
+footer {
+  grid-area: feet;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 10px;
+}
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+nav a {
+  border: solid yellow;
+  border-radius: 8px;
+  background-color: white;
+  color: green;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) 
+    {
+        main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "h"
+    "nav"
+    "article"
+    "left"
+    "right"
+    "feet";
+}
+    
+
+    nav ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
+
+    }
